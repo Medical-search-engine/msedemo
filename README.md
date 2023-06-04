@@ -21,7 +21,7 @@ nltk.
 5. Training the ‘Skip-gram’ model
 6. Training the ‘FastText’ model
 7. Model embeddings – Similarity
-8. PCA plots for Skip-gram and FastText models
+8. PCA plots for Skip-gram models
 9. Convert abstract and title to vectors using the Skip-gram and FastText model
 10.Use the Cosine similarity function
 11.Perform input query pre-processing
@@ -60,7 +60,7 @@ nltk.
 Dowload the repo or clone 
 
 ```markdown 
-git clone https://github.com/chizeni24/Medical-Search-Engine.git
+git clone https://github.com/Medical-search-engine/msedemo
 ```
 The folder structure should be as:
 1. input
@@ -83,9 +83,3 @@ then called inside the engine.py file.
 3. **Output folder:-**  The output folder contains the best fitted model that we trained
 for this data. This model can be easily loaded and used for future use and the
 user need not have to train all the models from the beginning.
-**Note:-** This model is built over a chunk of data. One can obtain the model for
-the entire data by running engine.py by taking the quality data to train the
-models.
-4. **Lib folder:**  This is a reference folder. It contains,
-  - The original ipython notebook for step by step processing :wrench:.
-  - The Medical.py notebook  used for running Streamlit UI
