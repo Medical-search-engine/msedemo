@@ -25,21 +25,7 @@ nltk.download('stopwords')
 nltk.download('wordnet')
 nltk.download('punkt')
 
-import pymongo
-@st.cache_resource
-def init_connection():
-    return pymongo.MongoClient(**st.secrets["mongo"])
 
-client=init_connection()
-@st.cache_data(ttl=600)
-def get_data():
-    db=client.mydb
-    items=db.mycollection.find()
-    items=list(items)
-
-items=get_data()
-for item in items:
-    st.write(f"{item['name']}")
 
 df=pd.read_csv('input/Dimension-covid.csv')   #for preprocessing
 df1 = pd.read_csv('input/Dimension-covid.csv')  # for returning results
